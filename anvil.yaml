@@ -1,5 +1,10 @@
 allow_embedding: false
 db_schema:
+  goals:
+    client: none
+    columns: []
+    server: full
+    title: goals
   tasks:
     client: none
     columns:
