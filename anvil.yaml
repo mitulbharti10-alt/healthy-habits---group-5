@@ -2,7 +2,40 @@ allow_embedding: false
 db_schema:
   goals:
     client: none
-    columns: []
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      client_hidden: false
+      name: user
+      target: users
+      type: link_single
+    - admin_ui: {order: 1, width: 200}
+      client_hidden: false
+      name: title
+      type: string
+    - admin_ui: {order: 2, width: 200}
+      client_hidden: false
+      name: subject
+      type: string
+    - admin_ui: {order: 3, width: 200}
+      client_hidden: false
+      name: goal_type
+      type: string
+    - admin_ui: {order: 4, width: 200}
+      client_hidden: false
+      name: target_value
+      type: number
+    - admin_ui: {order: 5, width: 200}
+      client_hidden: false
+      name: 'current_value '
+      type: number
+    - admin_ui: {order: 6, width: 200}
+      client_hidden: false
+      name: 'created_data '
+      type: datetime
+    - admin_ui: {order: 7, width: 200}
+      client_hidden: false
+      name: dealdline
+      type: date
     server: full
     title: goals
   tasks:
