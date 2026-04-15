@@ -11,8 +11,10 @@ def create_goal (user, title, subject, goal_type, target_value):
     user=user, 
     title=title,
     subject=subject, 
-    
-    
+    goal_type=goal_type,
+    target_value=target_value, 
+    current_value=0
+    created_data=datetime.now() 
   ) 
 
 
