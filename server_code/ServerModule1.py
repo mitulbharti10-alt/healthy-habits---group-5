@@ -7,7 +7,13 @@ import anvil.server
 
 @anvil.server.callable
 def create_goal (user, title, subject, goal_type, target_value):
-  app import  
+  app_tables.goals.add_row(
+    user=user, 
+    title=title,
+    subject=subject, 
+    
+    
+  ) 
 
 
 
