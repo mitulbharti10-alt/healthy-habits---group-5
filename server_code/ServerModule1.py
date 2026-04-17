@@ -14,8 +14,8 @@ def create_goal (user, title, subject, goal_type, target_value):
     goal_type=goal_type,
     target_value=target_value, 
     current_value=0
-    created_data=datetime.now() 
-  ) 
+    created_data=datetime.now()   
+  )  
 
 
 
