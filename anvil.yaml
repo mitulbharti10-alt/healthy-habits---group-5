@@ -61,6 +61,11 @@ db_schema:
       client_hidden: false
       name: priority
       type: string
+    - admin_ui: {order: 5, width: 200}
+      client_hidden: false
+      name: goal
+      target: goals
+      type: link_single
     server: full
     title: tasks
   users:
