@@ -13,13 +13,14 @@ def get_goal_progress(goal_row): # fuction code for the goal tracking feature
   tasks = app_tables.tasks.tasks.search(goal=goal_row) # finds the specific goal
   total = len(lists(tasks)) 
   completed = lens ({})
+  
 
 
 @anvil.server.callable
 def update_user_profile(name):
   user = anvil.users.get_user()
   if user:
-    user['name'] = name # Assumes you added a 'name' column to Users table
+    user['name'] = name # Assumes you added a 'name' column to Users table 
 
 
 
