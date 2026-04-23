@@ -95,11 +95,19 @@ db_schema:
       client_hidden: false
       name: confirmed_email
       type: bool
+    - admin_ui: {order: 6, width: 200}
+      client_hidden: true
+      name: signed_up
+      type: datetime
+    - admin_ui: {order: 7, width: 200}
+      client_hidden: true
+      name: mfa
+      type: simpleObject
     server: full
     title: Users
 dependencies: []
-name: Healthy Habits
-package_name: Healthy_Habits
+name: Healthy Habits - Group 5
+package_name: Healthy_Habits___Group_5
 renamed: true
 runtime_options:
   client_version: '3'
@@ -114,11 +122,14 @@ services:
 - client_config: {}
   server_config: {custom_smtp: true}
   source: /runtime/services/anvil/email.yml
-- client_config: {allow_signup: false, confirm_email: true, enable_automatically: true, use_email: true}
+- client_config: {allow_signup: true, confirm_email: true, enable_automatically: true, mfa_timeout_days: 0, require_mfa: false, require_secure_passwords: true, use_email: true, use_facebook: false, use_google: false}
   server_config: {user_table: users}
   source: /runtime/services/anvil/users.yml
 - client_config: {}
   server_config: {}
   source: /runtime/services/google.yml
+- client_config: {}
+  server_config: {}
+  source: /runtime/services/facebook.yml
 startup: {module: LoginPage, type: form}
 startup_form: null
