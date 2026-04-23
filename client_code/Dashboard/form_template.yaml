@@ -5,7 +5,7 @@ components:
     properties: {bold: true, font_size: 21, role: outlined, text: 'Welcome Back, Akshay!'}
     type: TextBox
   - event_bindings: {}
-    layout_properties: {grid_position: 'ASZMIV,RYBVAL'}
+    layout_properties: {grid_position: 'HDCTUA,LYWJUW'}
     name: G
     properties: {role: outlined-button, text: Goals}
     type: Button
