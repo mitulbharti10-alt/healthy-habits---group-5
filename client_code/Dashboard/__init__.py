@@ -28,15 +28,32 @@ from datetime import date, timedelta
 from anvil.tables import app_tables
 import anvil.users 
 
-def get_week_start() 
+# the weekly streak function code goes here
+def get_week_start(): 
     today = date.today() 
-  return today - timedelta(days=today.weekday()) # Monday 
-
+   return today - timedelta(days=today.weekday()) # Monday 
+ 
 def load_streak(self):
   user = anivl.user.get_users() 
   week_start = get_week_start() 
 
-  row = app_tables.streaks.get(user=user, week_star)
+  row = app_tables.streaks.get(user=user, week_start=week_start) 
+
+  if not row:
+    row = app_tables.streaks.add.row(
+      user=user
+      week_start=week_start,
+      mon = False,
+      tue = False,
+      wed = False,
+      thu = False, 
+      fri = False
+      sat = False, 
+      sun = False
+    )
+
+self.row = row  
+    
 
 
 
