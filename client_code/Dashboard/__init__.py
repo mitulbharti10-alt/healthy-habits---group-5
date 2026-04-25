@@ -23,4 +23,27 @@ class Dashboard(DashboardTemplate):
     pass  # Write Code Here
 
     self.goals = 100 
+
+from datetime import date, timedelta
+from anvil.tables import app_tables
+import anvil.users 
+
+def get_week_start() 
+    today = date.today() 
+  return today - timedelta(days=today.weekday()) # Monday 
+
+def load_streak(self):
+  user = anivl.user.get_users() 
+  week_start = get_week_start() 
+
+  row = app_tables.streaks.get(user=user, week_star)
+
+
+
+
+   
+
+
+
+
     

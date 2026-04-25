@@ -38,6 +38,49 @@ db_schema:
       type: date
     server: full
     title: goals
+  streaks:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      client_hidden: false
+      name: user
+      target: users
+      type: link_single
+    - admin_ui: {order: 1, width: 200}
+      client_hidden: false
+      name: week_start
+      type: date
+    - admin_ui: {order: 2, width: 200}
+      client_hidden: false
+      name: mon
+      type: bool
+    - admin_ui: {order: 3, width: 200}
+      client_hidden: false
+      name: tue
+      type: bool
+    - admin_ui: {order: 4, width: 200}
+      client_hidden: false
+      name: wed
+      type: bool
+    - admin_ui: {order: 5, width: 200}
+      client_hidden: false
+      name: thu
+      type: bool
+    - admin_ui: {order: 6, width: 200}
+      client_hidden: false
+      name: fri
+      type: bool
+    - admin_ui: {order: 7, width: 200}
+      client_hidden: false
+      name: sat
+      type: bool
+    - admin_ui: {order: 8, width: 200}
+      client_hidden: false
+      name: sun
+      type: bool
+    indexes: []
+    server: full
+    title: streaks
   tasks:
     client: none
     columns:
