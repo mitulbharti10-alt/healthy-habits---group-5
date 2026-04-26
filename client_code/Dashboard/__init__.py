@@ -28,7 +28,7 @@ from datetime import date, timedelta
 from anvil.tables import app_tables
 import anvil.users 
 
-# the weekly streak function code goes here
+# the weekly streak function code goes here 
 def get_week_start(): 
     today = date.today() 
    return today - timedelta(days=today.weekday()) # Monday 
