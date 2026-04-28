@@ -1,0 +1,9 @@
+components: []
+container:
+  properties:
+    html: |-
+      <p>
+        Welcome to FunStud, the app where education is enjoyable.
+      </p>
+  type: HtmlTemplate
+is_package: true
