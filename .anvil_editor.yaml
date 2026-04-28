@@ -3,8 +3,8 @@ unique_ids:
     standard-page.html: 6OUK4YU4WYNTCICYLMFL3CRQ72OORSDK
     theme.css: LHCKTBBZ3JAFC74ZXA3ADVXBYGKX2JS5
   forms:
-    Form1: '1776985480456479428890865.2441'
     LoginPage: '1774926118011298088404178.99286'
+    LoginPage.TEST_DASHBOARD: '1777348147988285345814916.6308'
   modules: {}
   scripts: {}
   server_modules:
