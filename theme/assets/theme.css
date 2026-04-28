@@ -132,6 +132,9 @@ color: %color:On Primary Container%;
   line-height: 40px;
   font-weight: 400;
 }
+.anvil-role-glass-button > .btn 
+background: rgba (255,255,255,1) 
+
 
 .anvil-role-title {
   font-size: 22px;
