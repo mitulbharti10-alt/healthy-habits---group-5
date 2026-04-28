@@ -146,14 +146,6 @@ db_schema:
       client_hidden: true
       name: mfa
       type: simpleObject
-    - admin_ui: {}
-      client_hidden: null
-      name: email_confirmation_key
-      type: string
-    - admin_ui: {width: 200}
-      client_hidden: false
-      name: address
-      type: string
     server: full
     title: Users
 dependencies: []
@@ -164,7 +156,9 @@ renamed: true
 runtime_options:
   client_version: '3'
   legacy_features: {bootstrap3: true, class_names: true}
-  server_spec: {base: python310-minimal}
+  server_spec: {}
+  server_spec_disabled: {base: python310-minimal, requirements: ''}
+  server_version: python3-sandbox
   version: 3
 scheduled_tasks: []
 services:
