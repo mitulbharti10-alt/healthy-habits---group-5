@@ -135,6 +135,7 @@ color: %color:On Primary Container%;
 .anvil-role-glass-button > .btn 
 background: rgba (255,255,255,1) 
 
+} 
 
 .anvil-role-title {
   font-size: 22px;
@@ -142,6 +143,12 @@ background: rgba (255,255,255,1)
   font-weight: 500;
 }
 
+.sidebar-brand 
+display: flex;
+justify-content: flex-end; 
+
+
+} 
 .anvil-role-body {
   font-size: 14px;
   line-height: 20px;

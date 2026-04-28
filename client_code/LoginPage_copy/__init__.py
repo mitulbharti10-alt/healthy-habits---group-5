@@ -1,5 +1,8 @@
 from ._anvil_designer import WelcomepageTemplate
 from anvil import *
+import anvil.facebook.auth
+import anvil.google.auth, anvil.google.drive
+from anvil.google.drive import app_files
 import anvil.server
 import anvil.google.auth
 import anvil.google.drive
@@ -20,7 +23,7 @@ class Welcomepage(WelcomepageTemplate):
     # self.content_panel.add_component(Survey(), full_width_row=True)
 
     # Check if the user is admin
-    anvil.server.call('get_total_responses')
+    anvil.server.call("get_total_responses")
 
     # if anvil.server.call('check_admin'):
     #   self.report_link.visible = True
@@ -29,13 +32,11 @@ class Welcomepage(WelcomepageTemplate):
 
   def report_link_click(self, **event_args):
     """This method is called when the report link is clicked"""
-    if anvil.server.call('check_admin'):
+    if anvil.server.call("check_admin"):
       self.content_panel.clear()
       self.content_panel.add_component(Report(), full_width_row=True)
       self.back_link.visible = True
       self.report_link.visible = False
-
-
 
   def back_link_click(self, **event_args):
     """This method is called when the back link is clicked"""
@@ -58,4 +59,4 @@ class Welcomepage(WelcomepageTemplate):
     user = anvil.users.login_with_form()
     if user:
       print(f"This user has logged in: ")
-      open_form('Survey')
+      open_form("Survey")

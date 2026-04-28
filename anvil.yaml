@@ -146,11 +146,20 @@ db_schema:
       client_hidden: true
       name: mfa
       type: simpleObject
+    - admin_ui: {}
+      client_hidden: null
+      name: email_confirmation_key
+      type: string
+    - admin_ui: {width: 200}
+      client_hidden: false
+      name: address
+      type: string
     server: full
     title: Users
 dependencies: []
-name: Healthy Habits - Group 5
-package_name: Healthy_Habits___Group_5
+metadata: {logo_img: 'asset:Logo maker project.png', title: FunStud}
+name: Tanish, Mitul
+package_name: Tanish__Mitul
 renamed: true
 runtime_options:
   client_version: '3'
