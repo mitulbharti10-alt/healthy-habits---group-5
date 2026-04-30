@@ -1,0 +1,22 @@
+<div style ="text-align: center; padding: 10px; border: 1px solid #e0e0e0;  
+<h3 id ="title-display" style= color: #333; ">Subject Name</h3>  
+
+# the code below is for Progress Circle
+<circle-progress id ="my-progress" value="100" max="100" text-format="percent" 
+                 style="--circle-progress-fill-color: #4B308E"> 
+</circle-progress>   
+</div> 
+
+<script>
+/** 
+ * Updates the progress bar value 
+ * This can be called from Python using self.call _js ('setProgress', 75) 
+ */ 
+  function setProgress(val) {
+    // We use this.find() to make sure we only change the circle inside THIS card 
+    const cp = this.find('#my-progress'); 
+    if (cp) {
+      cp.value = val;
+    }
+  } 
+</script>  
