@@ -149,6 +149,7 @@ db_schema:
     server: full
     title: Users
 dependencies: []
+metadata: {description: Our app is designed to help student track their studying time and build good study habits, logo_img: 'asset:Logo maker project.png', title: FunStud}
 name: Healthy Habits - Group 5
 package_name: Healthy_Habits___Group_5
 renamed: true
