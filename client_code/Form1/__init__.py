@@ -15,4 +15,9 @@ class Form1(Form1Template):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    # Any code you write here will run before the form opens. 
+    def update_progress(self, perrcentage) : 
+      # This sends the percentage (e.g. 75) to your Javascript function 
+      self.call_js('setProgress', percentage)  
+
+Class Form1 
+      
