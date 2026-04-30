@@ -1,10 +1,10 @@
-from ._anvil_designer import LoginPageTemplate
+from ._anvil_designer import SubjectCardTemplate
 from anvil import *
 import anvil.facebook.auth
 import anvil.users
 import anvil.server
 
-class LoginPage(LoginPageTemplate):
+class SubjectCard(SubjectCardTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
 
