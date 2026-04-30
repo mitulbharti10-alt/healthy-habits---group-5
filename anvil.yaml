@@ -152,7 +152,7 @@ dependencies: []
 metadata: {description: Our app is designed to help student track their studying time and build good study habits, logo_img: 'asset:Logo maker project.png', title: FunStud}
 name: Healthy Habits - Group 5
 native_deps:
-  head_html: "<script src=\"https://cdn.jsdelivr.net/npm/js-circle-progress/dist/circle-progress.min.js\" type=\"module\"></script> \n\n"
+  head_html: "0<script src=\"https://cdn.jsdelivr.net/npm/js-circle-progress/dist/circle-progress.min.js\" type=\"module\"></script> \n\n"
 package_name: Healthy_Habits___Group_5
 renamed: true
 runtime_options:
