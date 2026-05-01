@@ -21,7 +21,7 @@ components:
     properties: {align: full, role: outlined-button, text: 'Weekly Streak '}
     type: Button
   - components:
-    - layout_properties: {}
+    - layout_properties: {width: 468.68359375}
       name: form1_1
       properties: {}
       type: form:Form1
