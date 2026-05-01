@@ -1,7 +1,0 @@
-components:
-- layout_properties: {grid_position: 'BGNPYM,RCUADL'}
-  name: outlined_1
-  properties: {role: outlined}
-  type: TextBox
-container: {type: ColumnPanel}
-is_package: true
