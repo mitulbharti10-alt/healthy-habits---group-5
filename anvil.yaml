@@ -3,78 +3,79 @@ db_schema:
   goals:
     client: none
     columns:
-    - admin_ui: {order: 0, width: 200}
+    - admin_ui: {width: 200}
       client_hidden: false
       name: user
-      target: users
+      target: null
       type: link_single
-    - admin_ui: {order: 1, width: 200}
+    - admin_ui: {width: 200}
       client_hidden: false
       name: title
       type: string
-    - admin_ui: {order: 2, width: 200}
+    - admin_ui: {width: 200}
       client_hidden: false
       name: subject
       type: string
-    - admin_ui: {order: 3, width: 200}
+    - admin_ui: {width: 200}
       client_hidden: false
       name: goal_type
       type: string
-    - admin_ui: {order: 4, width: 200}
+    - admin_ui: {width: 200}
       client_hidden: false
       name: target_value
       type: number
-    - admin_ui: {order: 5, width: 200}
+    - admin_ui: {width: 200}
       client_hidden: false
       name: 'current_value '
       type: number
-    - admin_ui: {order: 6, width: 200}
+    - admin_ui: {width: 200}
       client_hidden: false
       name: 'created_data '
       type: datetime
-    - admin_ui: {order: 7, width: 200}
+    - admin_ui: {width: 200}
       client_hidden: false
       name: dealdline
       type: date
+    indexes: []
     server: full
     title: goals
   streaks:
-    client: none
+    client: full
     columns:
-    - admin_ui: {order: 0, width: 200}
+    - admin_ui: {width: 200}
       client_hidden: false
       name: user
-      target: users
+      target: null
       type: link_single
     - admin_ui: {order: 1, width: 200}
-      client_hidden: false
+      client_hidden: true
       name: week_start
       type: date
-    - admin_ui: {order: 2, width: 200}
+    - admin_ui: {width: 200}
       client_hidden: false
       name: mon
       type: bool
-    - admin_ui: {order: 3, width: 200}
+    - admin_ui: {width: 200}
       client_hidden: false
       name: tue
       type: bool
-    - admin_ui: {order: 4, width: 200}
+    - admin_ui: {width: 200}
       client_hidden: false
       name: wed
       type: bool
-    - admin_ui: {order: 5, width: 200}
+    - admin_ui: {width: 200}
       client_hidden: false
       name: thu
       type: bool
-    - admin_ui: {order: 6, width: 200}
+    - admin_ui: {width: 200}
       client_hidden: false
       name: fri
       type: bool
-    - admin_ui: {order: 7, width: 200}
+    - admin_ui: {width: 200}
       client_hidden: false
       name: sat
       type: bool
-    - admin_ui: {order: 8, width: 200}
+    - admin_ui: {width: 200}
       client_hidden: false
       name: sun
       type: bool
@@ -84,31 +85,32 @@ db_schema:
   tasks:
     client: none
     columns:
-    - admin_ui: {order: 0, width: 200}
+    - admin_ui: {width: 200}
       client_hidden: false
       name: task_name
       type: string
-    - admin_ui: {order: 1, width: 200}
+    - admin_ui: {width: 200}
       client_hidden: false
       name: 'subject '
       type: string
-    - admin_ui: {order: 2, width: 200}
+    - admin_ui: {width: 200}
       client_hidden: false
       name: due_date
       type: datetime
-    - admin_ui: {order: 3, width: 200}
+    - admin_ui: {width: 200}
       client_hidden: false
       name: completed
       type: bool
-    - admin_ui: {order: 4, width: 200}
+    - admin_ui: {width: 200}
       client_hidden: false
       name: priority
       type: string
-    - admin_ui: {order: 5, width: 200}
+    - admin_ui: {width: 200}
       client_hidden: false
       name: goal
       target: goals
       type: link_single
+    indexes: []
     server: full
     title: tasks
 dependencies: []

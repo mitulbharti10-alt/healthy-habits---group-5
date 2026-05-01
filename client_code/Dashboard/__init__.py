@@ -13,6 +13,11 @@ class Dashboard(DashboardTemplate):
   def Goals_click(self, **event_args):
     self.goals = 100 
 
+  user = anvil.users.get_user() 
+  if user is None: 
+    anvil.users.login_with_form() 
+    user = anvil.users.get_user() 
+
   def load_streak(self):
    
     user = anvil.users.get_user() 
