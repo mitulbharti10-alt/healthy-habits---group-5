@@ -21,20 +21,11 @@ components:
     properties: {align: full, role: outlined-button, text: 'Weekly Streak '}
     type: Button
   - components:
-    - layout_properties: {grid_position: 'UHXOCW,CGIZJR'}
-      name: outlined_2
-      properties: {role: outlined, text: Mathematics}
-      type: TextBox
-    layout_properties: {grid_position: 'CYUOFI,GVGKPW'}
-    name: column_panel_2
-    properties: {}
-    type: ColumnPanel
-  - components:
     - layout_properties: {}
       name: form1_1
       properties: {}
       type: form:Form1
-    layout_properties: {grid_position: 'CYUOFI,DMHUPV'}
+    layout_properties: {grid_position: 'ZKOAQM,FUDZHZ'}
     name: flow_panel_1
     properties: {}
     type: FlowPanel
