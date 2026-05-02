@@ -1048,12 +1048,12 @@ div.plot-container.plotly svg.main-svg {
 }
 
 .anvil-role-perfect-circle {
-  width: 100px !important; 
- height: 100px !important; 
+  width: 200x !important; 
+ height: 200px !important; 
   border-radius: 50%; 
   overflow: hidden; 
   display: flex; 
   align-items: centre; 
   justify-content: centre; 
-  overflow: hidden; 
+  overflow: hidden;  
 }

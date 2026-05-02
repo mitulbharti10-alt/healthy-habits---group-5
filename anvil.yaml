@@ -39,6 +39,21 @@ db_schema:
     indexes: []
     server: full
     title: goals
+  loginhistory_:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      client_hidden: false
+      name: user
+      target: users
+      type: link_single
+    - admin_ui: {order: 1, width: 200}
+      client_hidden: false
+      name: login_date
+      type: date
+    indexes: []
+    server: full
+    title: 'LoginHistory '
   streaks:
     client: full
     columns:
@@ -113,6 +128,24 @@ db_schema:
     indexes: []
     server: full
     title: tasks
+  users:
+    client: none
+    columns:
+    - admin_ui: {order: 0, width: 200}
+      client_hidden: false
+      name: username
+      type: string
+    - admin_ui: {order: 1, width: 200}
+      client_hidden: false
+      name: password
+      type: string
+    - admin_ui: {order: 2, width: 200}
+      client_hidden: false
+      name: 'last_login '
+      type: date
+    indexes: []
+    server: full
+    title: users
 dependencies: []
 metadata: {description: Our app is designed to help student track their studying time and build good study habits, logo_img: 'asset:Logo maker project.png', title: FunStud}
 name: Healthy Habits - Group 5
