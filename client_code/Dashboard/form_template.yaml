@@ -25,7 +25,7 @@ components:
     properties: {align: full, role: outlined-button, text: 'Weekly Streak '}
     type: Button
   - components:
-    - layout_properties: {width: 477.804375}
+    - layout_properties: {expand: false, width: 477.804375}
       name: progress_bar_science_1
       properties: {}
       type: form:ProgressBarScience

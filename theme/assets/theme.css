@@ -1055,4 +1055,5 @@ div.plot-container.plotly svg.main-svg {
   display: flex; 
   align-items: centre; 
   justify-content: centre; 
+  overflow: hidden; 
 }
