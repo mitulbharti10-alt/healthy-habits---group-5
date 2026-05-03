@@ -1062,9 +1062,10 @@ div.plot-container.plotly svg.main-svg {
   width: 40px !important; 
   height: 40px !important; 
   min-width: 40px !important 
-  min-height: 40px !impo
-  
-
-
-  
-}
+  min-height: 40px !important 
+  border-radius: 4px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  margin: 2px; 
+}  
