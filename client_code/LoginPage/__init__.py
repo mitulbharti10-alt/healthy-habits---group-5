@@ -1,7 +1,6 @@
-from ._anvil_designer import LoginPageTemplate
+from ._anvil_designer 
+import LoginPageTemplate
 from anvil import *
-import anvil.facebook.auth
-import anvil.users
 import anvil.server
 
 class LoginPage(LoginPageTemplate):
