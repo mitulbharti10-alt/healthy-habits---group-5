@@ -9,7 +9,8 @@ components:
   type: TextBox
 - layout_properties: {grid_position: 'WFAYCM,BDKOOG'}
   name: name_2
-  properties: {text: 'Email Address - Please Check, as not verified for @ symbol'}
+  properties:
+    text: "Email Address \n"
   type: Label
 - layout_properties: {grid_position: 'WFAYCM,YOSGRS'}
   name: email_box
@@ -17,11 +18,11 @@ components:
   type: TextBox
 - layout_properties: {grid_position: 'WMBLHK,GTPHKI'}
   name: label_1
-  properties: {text: Upload a profile image}
+  properties: {text: Upload a profile image - Not Available}
   type: Label
 - layout_properties: {grid_position: 'WMBLHK,WPAKFP'}
   name: file_loader_1
-  properties: {}
+  properties: {text: Upload}
   type: FileLoader
 - event_bindings: {click: save_button_click}
   layout_properties: {grid_position: 'BTZYNA,CWHFKU'}
@@ -31,7 +32,7 @@ components:
 - event_bindings: {click: sign_out_button_click}
   layout_properties: {grid_position: 'XJBVMY,SLEVEE'}
   name: sign_out_button
-  properties: {role: outlined-button, text: Sign Out}
+  properties: {role: outlined-button, text: ' Secure Sign Out'}
   type: Button
 container: {type: ColumnPanel}
 is_package: true
