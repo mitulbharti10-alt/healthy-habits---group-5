@@ -1,0 +1,7 @@
+components:
+- layout_properties: {grid_position: 'ZFBFIB,VWQFSV'}
+  name: label_1
+  properties: {text: '24'}
+  type: Label
+container: {type: ColumnPanel}
+is_package: true

@@ -331,3 +331,4 @@ roles:
 - components: [TextBox, TextArea, DatePicker, DropDown]
   name: input-error
 - {components: null, name: perfect-circle}
+- {name: calendar-day}

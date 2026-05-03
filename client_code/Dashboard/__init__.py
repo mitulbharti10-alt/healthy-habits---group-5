@@ -47,4 +47,11 @@ class Dashboard(DashboardTemplate):
     self.row = row
 
 class Homepage(HomepageTemplate):
-  def __init
+  def __init__(self, **properties):
+    self.init_components(**properties) 
+    #record the login as soon as the app starts
+    anvil.server.call('record login') 
+    self.refresh_streak() 
+
+    def refresh_streak(self): 
+      # Fetch data to update your UI 
