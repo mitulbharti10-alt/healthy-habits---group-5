@@ -1,7 +1,18 @@
 components:
-- layout_properties: {grid_position: 'ZFBFIB,VWQFSV'}
-  name: label_1
-  properties: {text: '24'}
-  type: Label
-container: {type: ColumnPanel}
+- components:
+  - layout_properties: {grid_position: 'AOYAUY,JIIKHF'}
+    name: label_day_name
+    properties: {font_size: 12, text: 'Mon '}
+    type: Label
+  - layout_properties: {grid_position: 'SPSLSV,TQNWXH'}
+    name: label_1
+    properties: {text: '24'}
+    type: Label
+  layout_properties: {grid_position: 'ZFBFIB,LEGBWY'}
+  name: link_1
+  properties: {}
+  type: Link
+container:
+  properties: {role: calendar-day, visible: true}
+  type: ColumnPanel
 is_package: true

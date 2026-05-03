@@ -6,7 +6,9 @@ from anvil.tables import app_tables
 from datetime import date, timedelta
 import anvil.users
 import anvil.server
-from .Daycard import Daycard 
+from ..Daycard import Daycard 
+from ._anvil_designer import DashboardTemplate 
+
 
 class Dashboard(DashboardTemplate):
   def __init__(self, **properties):
