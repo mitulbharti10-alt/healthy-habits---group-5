@@ -50,28 +50,27 @@ for d in week_dates:
     "day": d.strftime("%a"), #e.g. "Mon"
     "active": logged 
   })
-
-return stats   
+  return stats    
 
 @anvil.server.callable
 def get_current_streak():
   user = anvil.users.get_user() 
 if not user:
   return 0 
-  today = date.today()
+today = date.today()
 streak = 0 
 check_date = today 
 
 # Loops backwards: check today, then yesterday, etc.
 while True: 
   found = app_tables.loginhistory.get(user=user, login_date=check_date) 
-  if found: 
-    streak += 1
-    check_date -= timedelta(days=1) # Move back one day 
-  else: 
-    break # Stop counting as soon as a day is missed
+if found: 
+  streak += 1
+  check_date -= timedelta(days=1) # Move back one day 
+else: 
+  break # Stop counting as soon as a day is missed
 
-  return streak 
+return streak  
 
 
 
