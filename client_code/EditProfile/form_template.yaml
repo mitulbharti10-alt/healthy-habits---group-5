@@ -24,10 +24,6 @@ components:
   name: file_loader_1
   properties: {text: Upload}
   type: FileLoader
-- layout_properties: {grid_position: 'AHOQVO,BUETZX'}
-  name: profile_pic
-  properties: {}
-  type: Image
 - event_bindings: {click: save_button_click}
   layout_properties: {grid_position: 'BTZYNA,CWHFKU'}
   name: save_button
