@@ -39,21 +39,6 @@ db_schema:
     indexes: []
     server: full
     title: goals
-  loginhistory_:
-    client: none
-    columns:
-    - admin_ui: {order: 0, width: 200}
-      client_hidden: false
-      name: user
-      target: users
-      type: link_single
-    - admin_ui: {order: 1, width: 200}
-      client_hidden: false
-      name: login_date
-      type: date
-    indexes: []
-    server: full
-    title: 'LoginHistory '
   streaks:
     client: full
     columns:
@@ -143,6 +128,30 @@ db_schema:
       client_hidden: false
       name: 'last_login '
       type: date
+    - admin_ui: {order: 3, width: 200}
+      client_hidden: false
+      name: email
+      type: string
+    - admin_ui: {order: 4, width: 200}
+      client_hidden: true
+      name: enabled
+      type: bool
+    - admin_ui: {order: 5, width: 200}
+      client_hidden: true
+      name: last_login
+      type: datetime
+    - admin_ui: {order: 6, width: 200}
+      client_hidden: true
+      name: password_hash
+      type: string
+    - admin_ui: {order: 7, width: 200}
+      client_hidden: true
+      name: n_password_failures
+      type: number
+    - admin_ui: {order: 8, width: 200}
+      client_hidden: true
+      name: confirmed_email
+      type: bool
     indexes: []
     server: full
     title: users
@@ -163,31 +172,8 @@ services:
 - client_config: {}
   server_config: {}
   source: /runtime/services/tables.yml
-- client_config: {}
-  server_config: {custom_smtp: true}
-  source: /runtime/services/anvil/email.yml
-- client_config: {allow_signup: true, confirm_email: false, enable_automatically: true, mfa_timeout_days: 0, require_mfa: false, require_secure_passwords: true, use_email: true, use_facebook: false, use_google: false}
-  server_config:
-    email_content:
-      confirm_address:
-        html: |-
-          <p>Thanks for registering your account with us. Please click the following link to confirm that this is your account:</p>
-          <p>{{confirm_link}}</p>
-          <p>Thanks,</p>
-          <p>The team</p>
-      reset_password:
-        html: |-
-          <p>Hi there,</p>
-          <p>You have requested a password reset for your account {{email}}. To reset your password, click the link below:</p>
-          <p>{{reset_link}}</p>
-          <p>This link will expire in ten minutes.</p>
-    user_table: users
+- client_config: {allow_signup: false, confirm_email: true, enable_automatically: true, use_email: true}
+  server_config: {user_table: users}
   source: /runtime/services/anvil/users.yml
-- client_config: {}
-  server_config: {}
-  source: /runtime/services/google.yml
-- client_config: {}
-  server_config: {}
-  source: /runtime/services/facebook.yml
-startup: {module: Login_Page, type: form}
+startup: {module: Dashboard, type: form}
 startup_form: null
