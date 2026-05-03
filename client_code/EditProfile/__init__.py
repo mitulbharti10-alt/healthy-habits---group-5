@@ -11,8 +11,7 @@ class EditProfile(EditProfileTemplate):
     user = anvil.users.get_user()
     if user:
       self.email_box.text = user['email']
-      self.username_box.text = user['username']
-      self.dob_box.text = user['dob']
+      self.name_box.text = user['username']
 
 
     else:
