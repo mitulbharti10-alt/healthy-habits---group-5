@@ -5,7 +5,7 @@ components:
     properties: {text: New Task Creation}
     type: Label
   - layout_properties: {grid_position: 'SYGZDQ,ZITQND'}
-    name: label_2
+    name: task_box
     properties:
       text: |
         Task Name
@@ -19,11 +19,11 @@ components:
     properties: {role: outlined-button, text: Add}
     type: Button
   layout_properties: {grid_position: 'SZZJFO,ZPBWWV'}
-  name: outlined_card_1
+  name: label_task_name
   properties: {role: outlined-card}
   type: ColumnPanel
 - layout_properties: {grid_position: 'ORUARU,WIPIWO'}
-  name: repeating_panel_1
+  name: task_list
   properties: {item_template: ToDo.ItemTemplate1}
   type: RepeatingPanel
 container: {type: ColumnPanel}

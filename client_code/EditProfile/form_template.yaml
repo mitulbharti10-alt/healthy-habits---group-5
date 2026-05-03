@@ -1,11 +1,19 @@
 components:
+- layout_properties: {grid_position: 'NBVDKI,MPKCRG'}
+  name: label_5
+  properties: {text: Onboarding Process Page 1}
+  type: Label
 - layout_properties: {grid_position: 'BJFTVZ,TDNZEH'}
   name: label_2
-  properties: {align: center, text: 'Enter your details below:'}
+  properties:
+    align: center
+    text: |-
+      Enter your details below:
+      Required Fields Marked with *
   type: Label
 - layout_properties: {grid_position: 'YLJVPN,LPUQKI'}
   name: name
-  properties: {text: Full Name}
+  properties: {text: Full Name*}
   type: Label
 - layout_properties: {grid_position: 'YLJVPN,RJPXNB'}
   name: username_box
@@ -14,12 +22,23 @@ components:
 - layout_properties: {grid_position: 'WFAYCM,BDKOOG'}
   name: name_2
   properties:
-    text: "Email Address \n"
+    text: |
+      Email Address*
   type: Label
 - layout_properties: {grid_position: 'WFAYCM,YOSGRS'}
   name: email_box
   properties: {role: outlined}
   type: TextBox
+- layout_properties: {grid_position: 'SNBCDN,AEQJPA'}
+  name: dob_box
+  properties:
+    text: |
+      DOB - Not Required
+  type: Label
+- layout_properties: {grid_position: 'SNBCDN,XGNJPG'}
+  name: date_picker_1
+  properties: {}
+  type: DatePicker
 - layout_properties: {grid_position: 'WMBLHK,GTPHKI'}
   name: label_1
   properties: {text: Upload a profile image - Not Fuctional}
@@ -28,6 +47,21 @@ components:
   name: file_loader_1
   properties: {text: Upload}
   type: FileLoader
+- layout_properties: {grid_position: 'UAPEIF,HRQFEW'}
+  name: label_4
+  properties:
+    text: |
+      Biography about yourself - optional
+      Currently can only be saved from database directly, if text inserted into text box, saving does not occur in database.
+  type: Label
+- layout_properties: {grid_position: 'ZHURYC,XZXIHH'}
+  name: bio
+  properties: {}
+  type: TextArea
+- layout_properties: {grid_position: 'HGIFAQ,MPSNWZ'}
+  name: label_3
+  properties: {align: center, text: Check all details are correct before continuing}
+  type: Label
 - event_bindings: {click: save_button_click}
   layout_properties: {grid_position: 'BTZYNA,CWHFKU'}
   name: save_button
@@ -35,7 +69,7 @@ components:
   type: Button
 - layout_properties: {grid_position: 'TPNQON,TQTVJG'}
   name: continue_to_dashboard
-  properties: {role: outlined-button, text: Continue to Dashboard}
+  properties: {role: outlined-button, text: Continue to Goals}
   type: Button
 container: {type: ColumnPanel}
 is_package: true

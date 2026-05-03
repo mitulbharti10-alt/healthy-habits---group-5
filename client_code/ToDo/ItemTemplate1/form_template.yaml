@@ -3,7 +3,7 @@ components:
   - {code: 'self.item[''title'']', property: text, writeback: false}
   - {code: 'self.item[''done'']', property: checked, writeback: false}
   layout_properties: {grid_position: 'UBNYIH,LYIIDN'}
-  name: check_box_1
+  name: check_box
   properties: {text: check_box_1}
   type: CheckBox
 container: {type: ColumnPanel}

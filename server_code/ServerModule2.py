@@ -1,21 +1,34 @@
 import anvil.users
 import anvil.server
 from anvil.tables import app_tables
-import anvil.tables.query as q
+
+# --- Profile Management ---
 
 @anvil.server.callable
 def update_user_profile(new_username, new_email):
   user = anvil.users.get_user()
-  if not user:
-    return "Not logged in"
+  if user:
+    # Removed new_img: now only updates username and email
+    user.update(username=new_username, email=new_email)
+    return True
+  return False
 
-  # 1. Check if ANY OTHER user already has this email
-  # We search for the email but EXCLUDE the current user's row
-  existing_user = app_tables.users.get(email=new_email)
+# --- To-Do List Management ---
 
-  if existing_user and existing_user != user:
-    return "Email already used" # Send this back to the form
+@anvil.server.callable
+def add_task(task_text):
+  user = anvil.users.get_user()
+  if user:
+    # Adds a new row to your 'tasks' table linked to the logged-in user
+    app_tables.tasks.add_row(
+      title=task_text, 
+      done=False, 
+      owner=user
+    )
 
-  # 2. If it's unique (or is already the current user's email), save it
-  user.update(username=new_username, email=new_email)
-  return "Success"
+@anvil.server.callable
+def get_tasks():
+  user = anvil.users.get_user()
+  if user:
+    # Returns only the tasks that belong to the current user
+    return app_tables.tasks.search(owner=user)
