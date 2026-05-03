@@ -9,7 +9,7 @@ components:
   type: TextBox
 - layout_properties: {grid_position: 'WFAYCM,BDKOOG'}
   name: name_2
-  properties: {text: Email Address}
+  properties: {text: 'Email Address - Please Check, as not verified for @ symbol'}
   type: Label
 - layout_properties: {grid_position: 'WFAYCM,YOSGRS'}
   name: email_box
@@ -27,6 +27,11 @@ components:
   layout_properties: {grid_position: 'BTZYNA,CWHFKU'}
   name: save_button
   properties: {role: outlined-button, text: Save}
+  type: Button
+- event_bindings: {click: sign_out_button_click}
+  layout_properties: {grid_position: 'XJBVMY,SLEVEE'}
+  name: sign_out_button
+  properties: {role: outlined-button, text: Sign Out}
   type: Button
 container: {type: ColumnPanel}
 is_package: true

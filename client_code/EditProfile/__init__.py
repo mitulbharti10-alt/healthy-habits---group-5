@@ -30,3 +30,10 @@ class EditProfile(EditProfileTemplate):
     else:
       Notification("Error saving profile.", style="danger").show()
 
+  def sign_out_button_click(self, **event_args):
+    # 1. Log the user out from the Anvil session
+    anvil.users.logout()
+
+    # 2. Redirect them back to your LoginPage
+    # Ensure 'LoginPage' matches the name in your sidebar exactly
+    open_form('LoginPage')
