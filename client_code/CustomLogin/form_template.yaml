@@ -1,0 +1,27 @@
+components:
+- layout_properties: {grid_position: 'TTRMCZ,TZWOEX'}
+  name: label_1
+  properties: {text: Name}
+  type: Label
+- layout_properties: {grid_position: 'TTRMCZ,NOUGUX'}
+  name: name_box
+  properties: {}
+  type: TextBox
+- layout_properties: {grid_position: 'NXZAEF,TNXQFH'}
+  name: label_2
+  properties: {text: Password}
+  type: Label
+- layout_properties: {grid_position: 'NXZAEF,PBLFDH'}
+  name: password_box
+  properties: {visible: true}
+  type: TextBox
+- layout_properties: {grid_position: 'HCOUMG,SMJUIT'}
+  name: show_pw_check
+  properties: {text: Show Password}
+  type: CheckBox
+- layout_properties: {grid_position: 'HCOUMG,ZSCEOU'}
+  name: login_button
+  properties: {text: log In}
+  type: Button
+container: {type: ColumnPanel}
+is_package: true

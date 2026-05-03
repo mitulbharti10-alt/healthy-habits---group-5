@@ -12,27 +12,24 @@ class EditProfile(EditProfileTemplate):
     if user:
       self.email_box.text = user['email']
       self.username_box.text = user['username']
-      #self.profile_pic.source = user['picture'] # Shows the saved image 
     else:
       open_form('LoginPage')
 
-  #def file_loader_1_change(self, file, **event_args):
-    #"""Shows a preview as soon as a new photo is picked"""
-    #self.profile_pic.source = file
-
   def save_button_click(self, **event_args):
-    """Saves all changes (including the image) to the database"""
-    u_name = self.username_box.text
-    u_email = self.email_box.text
-    #u_img = self.file_loader_1.file
+    # Call the server and catch the return message
+    result = anvil.server.call('update_user_profile', 
+                               self.username_box.text, 
+                               self.email_box.text)
 
-    # Calls the 'update_user_profile' function in your server module
-    success = anvil.server.call(, u_name, u_email)
-
-    if success:
-      Notification("Profile saved successfully!", style="success").show()
+    if result == "Success":
+      Notification("Profile saved!", style="success").show()
+    elif result == "Email already used":
+      # Highlight the problem for the user
+      alert("This email address is already linked to another account. Please use a different one.", 
+            title="Email Already in Use")
     else:
-      Notification("Error saving profile.", style="danger").show()
+      Notification(result, style="danger").show()
+
 
   def to_do_button_click(self, **event_args):
     """Go to your to_do form list"""
