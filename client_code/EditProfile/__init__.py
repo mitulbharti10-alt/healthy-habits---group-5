@@ -12,22 +12,22 @@ class EditProfile(EditProfileTemplate):
     if user:
       self.email_box.text = user['email']
       self.username_box.text = user['username']
-      self.profile_pic.source = user['picture'] # Shows the saved image
+      #self.profile_pic.source = user['picture'] # Shows the saved image 
     else:
       open_form('LoginPage')
 
-  def file_loader_1_change(self, file, **event_args):
-    """Shows a preview as soon as a new photo is picked"""
-    self.profile_pic.source = file
+  #def file_loader_1_change(self, file, **event_args):
+    #"""Shows a preview as soon as a new photo is picked"""
+    #self.profile_pic.source = file
 
   def save_button_click(self, **event_args):
     """Saves all changes (including the image) to the database"""
     u_name = self.username_box.text
     u_email = self.email_box.text
-    u_img = self.file_loader_1.file
+    #u_img = self.file_loader_1.file
 
     # Calls the 'update_user_profile' function in your server module
-    success = anvil.server.call('update_user_profile', u_name, u_email, u_img)
+    success = anvil.server.call(, u_name, u_email)
 
     if success:
       Notification("Profile saved successfully!", style="success").show()
