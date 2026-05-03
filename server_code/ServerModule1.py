@@ -45,7 +45,12 @@ week_dates = [today - timedelta(days=i) for i in range(6, -1, -1)]
 
 stats = [] 
 for d in week_dates: 
-  logged = app.tables.loginhistory 
+  logged = app.tables.loginhistory.get(user=user, login_date=d) is not None 
+  stats.append ({
+    "day": d.strftime("%a"), #e.g. "Mon"
+    "active": logged 
+  })
+  return stats 
 
 
 
