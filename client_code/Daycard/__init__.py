@@ -15,4 +15,12 @@ class Daycard(DaycardTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-    # Any code you write here will run before the form opens.
+   # 'self.item' will contain the data for one day
+
+if self.item: 
+  # set the number on the card 
+  self.label_date.text = self.item['date'].day 
+
+  # Change colour based on if the user logged in ('active') 
+  if self.item['active']: 
+    self.background = #2ecc

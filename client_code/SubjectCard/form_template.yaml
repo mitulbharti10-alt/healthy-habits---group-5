@@ -1,5 +1,6 @@
 components: []
 container:
   data_bindings: []
+  properties: {role: calendar-day}
   type: ColumnPanel
 is_package: true
