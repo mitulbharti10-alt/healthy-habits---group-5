@@ -13,7 +13,7 @@ class EditProfile(EditProfileTemplate):
       self.email_box.text = user['email']
       self.username_box.text = user['username']
       self.dob_box.text = user['dob']
-      
+
 
     else:
       # Redirect to login if no one is logged in
