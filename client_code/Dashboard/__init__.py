@@ -45,3 +45,6 @@ class Dashboard(DashboardTemplate):
 
     
     self.row = row
+
+class Homepage(HomepageTemplate):
+  def __init
