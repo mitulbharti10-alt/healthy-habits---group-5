@@ -12,7 +12,7 @@ components:
   properties: {text: Email Address}
   type: Label
 - layout_properties: {grid_position: 'WFAYCM,YOSGRS'}
-  name: emailbox
+  name: email_box
   properties: {role: outlined}
   type: TextBox
 - layout_properties: {grid_position: 'WMBLHK,GTPHKI'}
