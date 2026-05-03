@@ -19,4 +19,5 @@ unique_ids:
   scripts: {}
   server_modules:
     ServerModule1: '1776058288752110507270650.60861'
+    ServerModule2: '1777808653833871648081078.5009'
     UserFunctions: '1777607425078711466473496.3912'

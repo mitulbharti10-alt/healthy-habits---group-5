@@ -3,55 +3,33 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from .Daycard import Daycard 
+import anvil.server  
 
 class Dashboard(DashboardTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
-    
-    self.load_streak()
 
-  def Goals_click(self, **event_args):
-    self.goals = 100 
-
+  #1 Ensure the user is logged in 
   user = anvil.users.get_user() 
-  if user is None: 
+  if not user: 
     anvil.users.login_with_form() 
-    user = anvil.users.get_user() 
 
-  def load_streak(self):
-   
-    user = anvil.users.get_user() 
+  #2 Record today's login in the database
+  anvil.server.call('record_login') 
 
+  #3 Build the seven day streak calendar
+  self.build_steak_ui() 
+
+def build_streak_ui(self): 
+  # Fetch the 7 days of data from the Server Module 
+  streak_data = avnil.server.call('get_streak_data') 
+
+  # Clear your flow panel before adding new cards 
+  self.flow_panel_steak.clear() 
+
+  # Create a Daycard for each of the 7 days
+  for day_info in streak_data: 
     
-    today = date.today()
-    week_start = today - timedelta(days=today.weekday())
-
     
-    row = app_tables.streaks.get(user=user, week_start=week_start) 
-
     
-    if not row:
-      row = app_tables.streaks.add_row(
-        user=user,
-        week_start=week_start,
-        mon=False,
-        tue=False,
-        wed=False,
-        thu=False, 
-        fri=False,
-        sat=False, 
-        sun=False
-      )
-
-    
-    self.row = row
-
-class Homepage(HomepageTemplate):
-  def __init__(self, **properties):
-    self.init_components(**properties) 
-    #record the login as soon as the app starts
-    anvil.server.call('record login') 
-    self.refresh_streak() 
-
-    def refresh_streak(self): 
-      # Fetch data to update your UI 
