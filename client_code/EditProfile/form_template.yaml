@@ -1,7 +1,7 @@
 components:
 - layout_properties: {grid_position: 'NBVDKI,MPKCRG'}
-  name: label_5
-  properties: {text: Onboarding Process Page 1}
+  name: label
+  properties: {align: center, text: Onboarding Process Page 1}
   type: Label
 - layout_properties: {grid_position: 'BJFTVZ,TDNZEH'}
   name: label_2
@@ -68,7 +68,7 @@ components:
   properties: {role: outlined-button, text: Save}
   type: Button
 - layout_properties: {grid_position: 'TPNQON,TQTVJG'}
-  name: continue_to_dashboard
+  name: continue_to_goals
   properties: {role: outlined-button, text: Continue to Goals}
   type: Button
 container: {type: ColumnPanel}
