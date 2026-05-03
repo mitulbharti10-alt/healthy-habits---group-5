@@ -82,33 +82,21 @@ db_schema:
     indexes: []
     server: full
     title: streaks
-  tasks:
+  tasks_2:
     client: none
     columns:
     - admin_ui: {width: 200}
       client_hidden: false
-      name: task_name
+      name: title
       type: string
     - admin_ui: {width: 200}
       client_hidden: false
-      name: 'subject '
-      type: string
-    - admin_ui: {width: 200}
-      client_hidden: false
-      name: due_date
-      type: datetime
-    - admin_ui: {width: 200}
-      client_hidden: false
-      name: completed
+      name: done
       type: bool
     - admin_ui: {width: 200}
       client_hidden: false
-      name: priority
-      type: string
-    - admin_ui: {width: 200}
-      client_hidden: false
-      name: goal
-      target: goals
+      name: owner
+      target: users
       type: link_single
     indexes: []
     server: full
@@ -152,6 +140,26 @@ db_schema:
       client_hidden: true
       name: confirmed_email
       type: bool
+    - admin_ui: {order: 9, width: 200}
+      client_hidden: true
+      name: signed_up
+      type: datetime
+    - admin_ui: {order: 10, width: 200}
+      client_hidden: true
+      name: mfa
+      type: simpleObject
+    - admin_ui: {order: 11, width: 200}
+      client_hidden: true
+      name: remembered_logins
+      type: simpleObject
+    - admin_ui: {order: 12, width: 200}
+      client_hidden: false
+      name: bio
+      type: string
+    - admin_ui: {}
+      client_hidden: null
+      name: email_confirmation_key
+      type: string
     indexes: []
     server: full
     title: users
@@ -172,8 +180,8 @@ services:
 - client_config: {}
   server_config: {}
   source: /runtime/services/tables.yml
-- client_config: {allow_signup: false, confirm_email: true, enable_automatically: true, use_email: true}
+- client_config: {allow_remember_me: false, allow_signup: true, confirm_email: false, enable_automatically: false, mfa_timeout_days: 0, remember_me_days: 30, require_mfa: false, use_email: true}
   server_config: {user_table: users}
   source: /runtime/services/anvil/users.yml
-startup: {module: Dashboard, type: form}
+startup: {module: LoginPage, type: form}
 startup_form: null
