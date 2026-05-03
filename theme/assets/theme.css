@@ -1058,4 +1058,13 @@ div.plot-container.plotly svg.main-svg {
   overflow: hidden;  
 }
 
-.naiv
+.anvil-role-calendar-day {
+  width: 40px !important; 
+  height: 40px !important; 
+  min-width: 40px !important 
+  min-height: 40px !impo
+  
+
+
+  
+}
