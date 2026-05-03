@@ -39,21 +39,6 @@ db_schema:
     indexes: []
     server: full
     title: goals
-  loginhistory_:
-    client: none
-    columns:
-    - admin_ui: {order: 0, width: 200}
-      client_hidden: false
-      name: user
-      target: users
-      type: link_single
-    - admin_ui: {order: 1, width: 200}
-      client_hidden: false
-      name: login_date
-      type: date
-    indexes: []
-    server: full
-    title: 'LoginHistory '
   streaks:
     client: full
     columns:
@@ -97,34 +82,30 @@ db_schema:
     indexes: []
     server: full
     title: streaks
-  tasks:
+  tasks_2:
     client: none
     columns:
     - admin_ui: {width: 200}
       client_hidden: false
-      name: task_name
+      name: title
       type: string
     - admin_ui: {width: 200}
       client_hidden: false
-      name: 'subject '
+      name: done
+      type: bool
+    - admin_ui: {width: 200}
+      client_hidden: false
+      name: owner
+      target: users
+      type: link_single
+    - admin_ui: {width: 200}
+      client_hidden: false
+      name: description
       type: string
     - admin_ui: {width: 200}
       client_hidden: false
       name: due_date
-      type: datetime
-    - admin_ui: {width: 200}
-      client_hidden: false
-      name: completed
-      type: bool
-    - admin_ui: {width: 200}
-      client_hidden: false
-      name: priority
-      type: string
-    - admin_ui: {width: 200}
-      client_hidden: false
-      name: goal
-      target: goals
-      type: link_single
+      type: date
     indexes: []
     server: full
     title: tasks
@@ -143,6 +124,54 @@ db_schema:
       client_hidden: false
       name: 'last_login '
       type: date
+    - admin_ui: {width: 200}
+      client_hidden: false
+      name: bio
+      type: string
+    - admin_ui: {width: 200}
+      client_hidden: true
+      name: confirmed_email
+      type: bool
+    - admin_ui: {width: 200}
+      client_hidden: false
+      name: email
+      type: string
+    - admin_ui: {}
+      client_hidden: null
+      name: email_confirmation_key
+      type: string
+    - admin_ui: {width: 200}
+      client_hidden: true
+      name: enabled
+      type: bool
+    - admin_ui: {width: 200}
+      client_hidden: true
+      name: remembered_logins
+      type: simpleObject
+    - admin_ui: {width: 200}
+      client_hidden: true
+      name: signed_up
+      type: datetime
+    - admin_ui: {width: 200}
+      client_hidden: true
+      name: mfa
+      type: simpleObject
+    - admin_ui: {width: 200}
+      client_hidden: true
+      name: password_hash
+      type: string
+    - admin_ui: {width: 200}
+      client_hidden: true
+      name: n_password_failures
+      type: number
+    - admin_ui: {width: 200}
+      client_hidden: false
+      name: dob
+      type: date
+    - admin_ui: {width: 200}
+      client_hidden: true
+      name: last_login
+      type: datetime
     indexes: []
     server: full
     title: users

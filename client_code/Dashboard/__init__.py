@@ -3,55 +3,33 @@ import anvil.users
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
+from datetime import date, timedelta
+import anvil.users
+import anvil.server
+from .Daycard import Daycard 
 
 class Dashboard(DashboardTemplate):
   def __init__(self, **properties):
     self.init_components(**properties)
-    
-    self.load_streak()
+
+    # 1. Handle Login
+    user = anvil.users.get_user()
+    if user is None:
+      user = anvil.users.login_with_form()
+
+    # 2. Record Today's Progress & Build the UI
+    anvil.server.call('record_login') 
+    self.refresh_streak_ui()
+
+  def refresh_streak_ui(self):
+    # Fetch the 7-day stats from your Server Module
+    stats = anvil.server.call('get_streak_data')
+
+    # Clear the FlowPanel and add your Daycards
+    self.flow_panel_streak.clear()
+    for day_info in stats:
+      self.flow_panel_streak.add_component(Daycard(item=day_info))
 
   def Goals_click(self, **event_args):
-    self.goals = 100 
-
-  user = anvil.users.get_user() 
-  if user is None: 
-    anvil.users.login_with_form() 
-    user = anvil.users.get_user() 
-
-  def load_streak(self):
-   
-    user = anvil.users.get_user() 
-
-    
-    today = date.today()
-    week_start = today - timedelta(days=today.weekday())
-
-    
-    row = app_tables.streaks.get(user=user, week_start=week_start) 
-
-    
-    if not row:
-      row = app_tables.streaks.add_row(
-        user=user,
-        week_start=week_start,
-        mon=False,
-        tue=False,
-        wed=False,
-        thu=False, 
-        fri=False,
-        sat=False, 
-        sun=False
-      )
-
-    
-    self.row = row
-
-class Homepage(HomepageTemplate):
-  def __init__(self, **properties):
-    self.init_components(**properties) 
-    #record the login as soon as the app starts
-    anvil.server.call('record login') 
-    self.refresh_streak() 
-
-    def refresh_streak(self): 
-      # Fetch data to update your UI 
+    # This sets a goal variable for your progress circle
+    self.goals = 100
