@@ -8,6 +8,7 @@ import anvil.users
 import anvil.server
 from ..Daycard import Daycard 
 from ._anvil_designer import DashboardTemplate 
+import anvil
 
 
 class Dashboard(DashboardTemplate):
@@ -35,3 +36,9 @@ class Dashboard(DashboardTemplate):
   def Goals_click(self, **event_args):
     # This sets a goal variable for your progress circle
     self.goals = 100
+
+  @anvil.handle("outlined_button_2", "click")
+  def outlined_button_2_click(self, **event_args):
+    """This method is called when the button is clicked"""
+
+def outline_button_2_Click(self, **event_args) 

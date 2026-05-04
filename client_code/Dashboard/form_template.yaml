@@ -51,6 +51,10 @@ components:
       - {data_key: column_3, id: OJLQEN, title: '                                      Weekly Streak Calendar'}
       role: null
     type: DataGrid
+  - layout_properties: {grid_position: 'LAVNBO,HJYPXD TIUHFR,ZJDUOE'}
+    name: outlined_button_2
+    properties: {role: outlined-button, text: Claim Daily Login Reward}
+    type: Button
   - components: []
     layout_properties: {grid_position: 'FPNRCX,UCMPQW'}
     name: flow_panel_2
