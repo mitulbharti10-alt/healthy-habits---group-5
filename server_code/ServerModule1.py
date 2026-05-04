@@ -35,11 +35,6 @@ def get_goal_progress(goal_row):
 
 
 
-@anvil.server.callable
-def update_user_profile(name):
-  user = anvil.users.get_user()
-  if user:
-    user['name'] = name # Assumes you added a 'name' column to Users table 
 
 
 
