@@ -19,4 +19,4 @@ class FakeDashboard(FakeDashboardTemplate):
   @handle("button_1", "click")
   def button_1_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('EditProfile')
+    open_form('Settings')
