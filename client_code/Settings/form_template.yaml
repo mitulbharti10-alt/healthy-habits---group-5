@@ -1,0 +1,19 @@
+components:
+- layout_properties: {grid_position: 'ICDHGW,XHHRKE'}
+  name: label_1
+  properties: {align: center, bold: true, text: Settings}
+  type: Label
+- layout_properties: {grid_position: 'ANGILU,DXMYKP'}
+  name: button_3
+  properties: {text: Edit Profile >}
+  type: Button
+- layout_properties: {grid_position: 'IKXELM,FMLDOH'}
+  name: button_1
+  properties: {text: Reset Password    >}
+  type: Button
+- layout_properties: {grid_position: 'JJLZXF,COWODJ'}
+  name: button_2
+  properties: {text: Sign Out >}
+  type: Button
+container: {type: ColumnPanel}
+is_package: true
