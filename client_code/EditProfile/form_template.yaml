@@ -33,7 +33,7 @@ components:
   name: dob_box
   properties:
     text: |
-      DOB - Not Required
+      DOB - Not Functional
   type: Label
 - layout_properties: {grid_position: 'SNBCDN,XGNJPG'}
   name: date_picker_1
