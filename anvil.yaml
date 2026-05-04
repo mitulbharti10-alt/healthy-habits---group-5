@@ -82,10 +82,10 @@ db_schema:
     indexes: []
     server: full
     title: streaks
-  tasks_2:
-    client: none
+  tasks:
+    client: full
     columns:
-    - admin_ui: {width: 200}
+    - admin_ui: {order: 0, width: 200}
       client_hidden: false
       name: title
       type: string
@@ -93,9 +93,9 @@ db_schema:
       client_hidden: false
       name: done
       type: bool
-    - admin_ui: {width: 200}
+    - admin_ui: {order: 2, width: 200}
       client_hidden: false
-      name: owner
+      name: author
       target: users
       type: link_single
     indexes: []
@@ -190,5 +190,5 @@ services:
 - client_config: {}
   server_config: {}
   source: /runtime/services/google.yml
-startup: {module: ToDo, type: form}
+startup: {module: LoginPage, type: form}
 startup_form: null

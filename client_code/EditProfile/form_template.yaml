@@ -25,16 +25,6 @@ components:
   name: email_box
   properties: {role: outlined}
   type: TextBox
-- layout_properties: {grid_position: 'SNBCDN,AEQJPA'}
-  name: dob_box
-  properties:
-    text: |
-      DOB - Not Functional
-  type: Label
-- layout_properties: {grid_position: 'SNBCDN,XGNJPG'}
-  name: DOB
-  properties: {}
-  type: DatePicker
 - layout_properties: {grid_position: 'WMBLHK,GTPHKI'}
   name: label_1
   properties: {text: Upload a profile image - Not Fuctional}

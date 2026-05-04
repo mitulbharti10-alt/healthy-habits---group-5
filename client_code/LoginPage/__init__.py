@@ -20,7 +20,7 @@ class LoginPage(LoginPageTemplate):
     if user:
       # This moves the user to the next screen. 
       # Ensure you have a form named 'Dashboard' in your sidebar!
-      open_form('EditProfile') 
+      open_form('FakeDashboard') 
     else:
       # Optional: what happens if they close the login box without logging in?
       Notification("Please log in to continue.").show()
