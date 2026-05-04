@@ -8,7 +8,7 @@ from anvil.tables import app_tables
 def update_user_profile(new_username, new_email):
   user = anvil.users.get_user()
   if user:
-    # Removed new_img: now only updates username and email
+    # Updates username and email
     user.update(username=new_username, email=new_email)
     return True
   return False
@@ -32,3 +32,4 @@ def get_tasks():
   if user:
     # Returns only the tasks that belong to the current user
     return app_tables.tasks.search(owner=user)
+  return [] # Added to prevent errors if no user is logged in

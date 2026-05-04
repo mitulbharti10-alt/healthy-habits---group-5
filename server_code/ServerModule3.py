@@ -1,8 +1,21 @@
+import anvil.server
+import anvil.users
+from anvil.tables import app_tables
+
 @anvil.server.callable
-def add_task(text):
-  app_tables.tasks.add_row(title=text, done=False)
+def add_task(task_text):
+  user = anvil.users.get_user()
+  if user:
+    app_tables.tasks.add_row(
+      title=task_text, 
+      done=False, 
+      owner=user
+    )
 
 @anvil.server.callable
 def get_tasks():
-  # Use client_writable() if you want to allow users to check/uncheck boxes directly
-  return app_tables.tasks.client_writable().search()
+  user = anvil.users.get_user()
+  if user:
+    return app_tables.tasks.search(owner=user)
+  return []
+
