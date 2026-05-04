@@ -218,5 +218,5 @@ services:
 - client_config: {}
   server_config: {}
   source: /runtime/services/facebook.yml
-startup: {module: Login, type: form}
+startup: {module: Dashboard, type: form}
 startup_form: null

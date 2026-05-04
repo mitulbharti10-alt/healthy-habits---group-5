@@ -41,4 +41,9 @@ class Dashboard(DashboardTemplate):
   def outlined_button_2_click(self, **event_args):
     """This method is called when the button is clicked"""
 
+  @anvil.handle("settings", "click")
+  def settings_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('EditProfile')
+
 def outline_button_2_Click(self, **event_args) 

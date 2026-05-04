@@ -68,7 +68,12 @@ components:
   name: content_panel
   properties: {background: '#FFB7C5'}
   type: ColumnPanel
-- layout_properties: {slot: nav-right}
+- components:
+  - layout_properties: {}
+    name: settings
+    properties: {role: outlined-button, text: Settings}
+    type: Button
+  layout_properties: {slot: nav-right}
   name: navbar_links
   properties: {}
   type: FlowPanel
