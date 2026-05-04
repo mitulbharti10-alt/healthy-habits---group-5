@@ -5,7 +5,7 @@ components:
     properties: {text: Task Name}
     type: Label
   - layout_properties: {grid_position: 'UIURPM,ODLZUG'}
-    name: text_box_1
+    name: new_task_box
     properties: {}
     type: TextBox
   - layout_properties: {grid_position: 'WRSTPO,RLSAGU'}
