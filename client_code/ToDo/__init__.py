@@ -11,23 +11,24 @@ from anvil.tables import app_tables
 
 class ToDo(ToDoTemplate):
   def __init__(self, **properties):
-    # Set Form properties and Data Bindings.
     self.init_components(**properties)
-def __init__(self, **properties):
-  self.init_components(**properties)
-  # Fill your list with data from the server
-  self.task_list.items = anvil.server.call('get_tasks')
+    # This loads the existing tasks when the app opens
+    self.refresh_tasks()
+
+  def refresh_tasks(self):
+    # This fills the repeating panel
+    self.task_list.items = anvil.server.call('get_tasks')
 
   def add_btn_click(self, **event_args):
     # 1. Grab what the user typed
     new_task = self.new_task_box.text
 
     if new_task:
-      # 2. Send it to the server to save in the database
+      # 2. Send it to the server to save
       anvil.server.call('add_task', new_task)
 
-      # 3. Clear the box so they can type again
+      # 3. Clear the box
       self.new_task_box.text = ""
 
-      # 4. Refresh the list to show the new task
+      # 4. Refresh the list
       self.refresh_tasks()
