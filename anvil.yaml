@@ -98,14 +98,6 @@ db_schema:
       name: owner
       target: users
       type: link_single
-    - admin_ui: {order: 3, width: 200}
-      client_hidden: false
-      name: description
-      type: string
-    - admin_ui: {order: 4, width: 200}
-      client_hidden: false
-      name: due_date
-      type: date
     indexes: []
     server: full
     title: tasks
@@ -198,5 +190,5 @@ services:
 - client_config: {}
   server_config: {}
   source: /runtime/services/google.yml
-startup: {module: LoginPage, type: form}
+startup: {module: ToDo, type: form}
 startup_form: null

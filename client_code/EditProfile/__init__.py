@@ -56,21 +56,8 @@ class EditProfile(EditProfileTemplate):
       self.email_box.focus()
       return
 
-    # If both are filled, proceed
-    open_form('dashboard')
-
-  def to_do_button_click(self, **event_args):
-    """Navigation to the To-Do list"""
-    open_form('to_do')
-
-  def sign_out_button_click(self, **event_args):
-    """Logs the user out and returns to login"""
-    anvil.users.logout()
-    open_form('LoginPage')
-
-
-
   @handle("continue_to_goals", "click")
   def continue_to_goals_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('ToDo')
+
