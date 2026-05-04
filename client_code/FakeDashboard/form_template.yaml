@@ -1,5 +1,9 @@
 components:
-- components: []
+- components:
+  - layout_properties: {grid_position: 'IMRJLS,KGFKMY'}
+    name: to_do_1
+    properties: {}
+    type: form:ToDo
   layout_properties: {slot: default}
   name: content_panel
   properties: {}
