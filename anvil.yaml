@@ -195,7 +195,7 @@ services:
 - client_config: {}
   server_config: {custom_smtp: true}
   source: /runtime/services/anvil/email.yml
-- client_config: {allow_signup: true, confirm_email: false, enable_automatically: true, mfa_timeout_days: 0, require_mfa: false, require_secure_passwords: false, use_email: true, use_facebook: false, use_google: false}
+- client_config: {allow_remember_me: false, allow_signup: true, confirm_email: false, enable_automatically: true, mfa_timeout_days: 0, remember_me_days: 30, require_mfa: false, require_secure_passwords: false, use_email: true, use_facebook: false, use_google: false}
   server_config:
     email_content:
       confirm_address:
