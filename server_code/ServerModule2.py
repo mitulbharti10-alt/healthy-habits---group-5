@@ -1,10 +1,12 @@
+import anvil.google.auth, anvil.google.drive, anvil.google.mail
+from anvil.google.drive import app_files
 import anvil.users
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
 import anvil.server
 
 @anvil.server.callable
-def update_user_profile(new_username, new_email):
-  user = anvil.users.get_user()
-  if user:
-    user.update(username=new_username, email=new_email)
-    return True
-  return False
+def get_tasks():
+  return app_tables.tasks 
+

@@ -61,3 +61,8 @@ class EditProfile(EditProfileTemplate):
     """This method is called when the button is clicked"""
     open_form('ToDo')
 
+  @handle("go_back", "click")
+  def go_back_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    open_form('FakeDashboard')
+
