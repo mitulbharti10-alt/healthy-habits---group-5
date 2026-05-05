@@ -4,22 +4,14 @@ components:
     name: label_1
     properties: {text: Task Name}
     type: Label
-  - layout_properties: {grid_position: 'UIURPM,HMITCA OJHJCO,BBKTDG'}
-    name: label_3
-    properties: {text: Due Date}
-    type: Label
   - layout_properties: {grid_position: 'UIURPM,HMITCA OKEUDA,KLJMWI'}
     name: label_2
     properties: {text: Subject}
     type: Label
   - layout_properties: {grid_position: 'UIURPM,ODLZUG PDTIFE,LFMESC'}
-    name: task_name_box
+    name: new_task_box
     properties: {}
     type: TextBox
-  - layout_properties: {grid_position: 'UIURPM,ODLZUG TCQRBV,ZOAIED'}
-    name: date_picker_1
-    properties: {}
-    type: DatePicker
   - layout_properties: {grid_position: 'UIURPM,ODLZUG OWJLIU,HDFBSS'}
     name: category_box
     properties:
@@ -38,18 +30,6 @@ components:
   name: task_list
   properties: {item_template: ToDo.ItemTemplate1}
   type: RepeatingPanel
-- components:
-  - name: repeating_panel_1
-    properties: {item_template: ToDo.RowTemplate2}
-    type: RepeatingPanel
-  layout_properties: {grid_position: 'KSZGPG,ZDAOMR'}
-  name: data_grid_1
-  properties:
-    columns:
-    - {data_key: column_1, id: JKSDUP, title: Task}
-    - {data_key: column_2, id: VJQQOR, title: Subject}
-    - {data_key: column_3, id: OJLQEN, title: Due Date}
-  type: DataGrid
 container:
   properties: {visible: true}
   type: ColumnPanel

@@ -20,5 +20,4 @@ def add_task(text, category, due_date): # Added 'due_date' here
       done=False, 
       author=user, 
       category=category,
-      due_date=due_date # Added this line to save to the table
     )
