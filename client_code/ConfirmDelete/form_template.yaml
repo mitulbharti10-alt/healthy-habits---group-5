@@ -16,16 +16,17 @@ components:
   properties: {}
   type: Label
 - layout_properties: {grid_position: 'SGVXEJ,XNJBDI'}
-  name: label_4
+  name: confirm_delete
   properties: {align: center, background: '#ff0000', foreground: '#ffffff', text: Confirm Delete}
   type: Label
 - layout_properties: {grid_position: 'SGVXEJ,XISDJV'}
   name: label_5
   properties: {}
   type: Label
-- layout_properties: {grid_position: 'CXHKGE,KNNOQU'}
-  name: label_7
-  properties: {align: center, foreground: '#243e60', text: Cancel}
-  type: Label
+- event_bindings: {}
+  layout_properties: {grid_position: 'RBYCQD,GFXVEN'}
+  name: cancel_btn
+  properties: {role: outlined-button, text: 'No, Take Me Back'}
+  type: Button
 container: {type: ColumnPanel}
 is_package: true

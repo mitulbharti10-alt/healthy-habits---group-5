@@ -1,11 +1,6 @@
-import anvil.google.auth, anvil.google.drive, anvil.google.mail
-from anvil.google.drive import app_files
 import anvil.users
-import anvil.tables as tables
-import anvil.tables.query as q
 from anvil.tables import app_tables
 import anvil.server
-import anvil.users 
 
 @anvil.server.callable
 def get_tasks():
@@ -16,13 +11,14 @@ def get_tasks():
   return []
 
 @anvil.server.callable
-def add_task(text, category):
-  # This saves the new task with its category
+def add_task(text, category, due_date): # Added 'due_date' here
   user = anvil.users.get_user()
   if user:
+    # This saves the title, category, author, and due date all at once
     app_tables.tasks.add_row(
       title=text, 
       done=False, 
       author=user, 
-      category=category
+      category=category,
+      due_date=due_date # Added this line to save to the table
     )
