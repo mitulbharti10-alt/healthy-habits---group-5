@@ -27,26 +27,15 @@ components:
   type: TextBox
 - layout_properties: {grid_position: 'WMBLHK,GTPHKI'}
   name: label_1
-  properties: {text: Upload a profile image - Not Fuctional}
+  properties: {text: 'Upload a profile image '}
   type: Label
 - layout_properties: {grid_position: 'WMBLHK,WPAKFP'}
-  name: file_loader_1
-  properties: {text: Upload}
+  name: profile_pic_loader
+  properties: {text: Upload a file}
   type: FileLoader
-- layout_properties: {grid_position: 'UAPEIF,HRQFEW'}
-  name: label_4
-  properties:
-    text: |
-      Biography about yourself - optional
-      Currently can only be saved from database directly, if text inserted into text box, saving does not occur in database.
-  type: Label
-- layout_properties: {grid_position: 'ZHURYC,XZXIHH'}
-  name: bio
-  properties: {}
-  type: TextArea
 - layout_properties: {grid_position: 'HGIFAQ,MPSNWZ'}
   name: label_3
-  properties: {align: center, text: Check all details are correct before continuing}
+  properties: {align: center, text: Verify all details are correct}
   type: Label
 - event_bindings: {click: save_button_click}
   layout_properties: {grid_position: 'BTZYNA,CWHFKU'}

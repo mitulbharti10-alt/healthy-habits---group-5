@@ -10,7 +10,7 @@ components:
   type: ColumnPanel
 - components:
   - layout_properties: {}
-    name: button_1
+    name: settings_btn_click
     properties: {text: Settings}
     type: Button
   layout_properties: {slot: nav-right}

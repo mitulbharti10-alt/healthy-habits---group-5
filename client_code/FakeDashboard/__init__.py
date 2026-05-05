@@ -16,7 +16,9 @@ class FakeDashboard(FakeDashboardTemplate):
 
     # Any code you write here will run before the form opens.
 
-  @handle("button_1", "click")
-  def button_1_click(self, **event_args):
+  @handle("settings_btn_click", "click")
+  def settings_btn_click_click(self, **event_args):
     """This method is called when the button is clicked"""
     open_form('Settings')
+
+

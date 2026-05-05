@@ -1,0 +1,15 @@
+import anvil.google.auth, anvil.google.drive, anvil.google.mail
+from anvil.google.drive import app_files
+import anvil.users
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
+import anvil.server
+
+@anvil.server.callable
+def save_profile_pic(file):
+  user = anvil.users.get_user()
+  if user:
+    # Update the logged-in user's specific row
+    user['profile_pic'] = file
+

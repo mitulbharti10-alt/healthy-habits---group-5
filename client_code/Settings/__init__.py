@@ -8,26 +8,21 @@ class Settings(SettingsTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-  def reset_pw_btn_click(self, **event_args):
+  def reset_pw_click_click(self, **event_args):
+    # This pops up Anvil's secure, pre-built password change dialog
+    # It handles all the validation (matching passwords, length, etc.) automatically
     anvil.users.change_password_with_form()
+
+    # Show a professional notification when they finish
     Notification("Password updated successfully!").show()
 
-  def logout_btn_click(self, **event_args):
-    #Log the user out from the server
-    anvil.users.logout()
+  def reset_pw_click(self, **event_args):
+    anvil.users.change_password_with_form()
+    Notification("Password updated!").show()
 
-    Notification("You have been signed out.").show()
 
-    open_form('LoginPage') 
 
-  @handle("edit_profile", "click")
-  def edit_profile(self, **event_args):
-    open_form('EditProfile')
 
-from ._anvil_designer import SettingsTemplate
-from anvil import *
-import anvil.server
-import anvil.users
 
 class Settings(SettingsTemplate):
   def __init__(self, **properties):
@@ -43,4 +38,5 @@ class Settings(SettingsTemplate):
     else:
       # Fallback if the name is empty (Anvil users always have an email)
       self.name_label.text = f"Welcome, {user['email']}!"
+
 
