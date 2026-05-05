@@ -8,19 +8,13 @@ class Settings(SettingsTemplate):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
-  def reset_pw_click_click(self, **event_args):
-    # This pops up Anvil's secure, pre-built password change dialog
-    # It handles all the validation (matching passwords, length, etc.) automatically
-    anvil.users.change_password_with_form()
-
-    # Show a professional notification when they finish
-    Notification("Password updated successfully!").show()
-
   def reset_pw_click(self, **event_args):
     anvil.users.change_password_with_form()
     Notification("Password updated!").show()
 
-
+  @handle("edit_profile", "click")
+  def edit_profile_click(self, **event_args):
+    open_form('EditProfile')
 
 
 

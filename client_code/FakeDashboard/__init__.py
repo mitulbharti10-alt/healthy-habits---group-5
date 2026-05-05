@@ -21,4 +21,9 @@ class FakeDashboard(FakeDashboardTemplate):
     """This method is called when the button is clicked"""
     open_form('Settings')
 
+  @handle("feedback", "click")
+  def feedback_click(self, **event_args):
+    """This method is called when the button is clicked"""
+    pass  # Write Code Here
+
 

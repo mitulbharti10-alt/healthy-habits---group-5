@@ -9,7 +9,7 @@ components:
   name: edit_profile
   properties: {text: Edit Profile >}
   type: Button
-- event_bindings: {}
+- event_bindings: {click: reset_pw_click}
   layout_properties: {grid_position: 'IKXELM,FMLDOH'}
   name: reset_pw_click
   properties: {text: Change Password    >}
