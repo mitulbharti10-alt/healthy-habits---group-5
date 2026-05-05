@@ -7,24 +7,22 @@ from anvil.tables import app_tables
 import anvil.server
 import anvil.users 
 
-
-
 @anvil.server.callable
 def get_tasks():
-  # 1. Find out who is logged in
+  # This fetches the tasks for the logged-in user
   user = anvil.users.get_user()
   if user:
-    # 2. Only return tasks where the 'author' column matches this user
     return app_tables.tasks.client_writable().search(author=user, done=False)
-  else:
-    return []
+  return []
 
 @anvil.server.callable
-def add_task(text):
+def add_task(text, category):
+  # This saves the new task with its category
   user = anvil.users.get_user()
   if user:
-    # 3. Save the user along with the task
-    app_tables.tasks.add_row(title=text, done=False, author=user)
-
-  
-
+    app_tables.tasks.add_row(
+      title=text, 
+      done=False, 
+      author=user, 
+      category=category
+    )

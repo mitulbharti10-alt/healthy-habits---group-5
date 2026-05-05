@@ -12,7 +12,6 @@ class EditProfile(EditProfileTemplate):
     if user:
       self.email_box.text = user['email']
       self.username_box.text = user['username']
-      self.dob_box.text = user['dob']
 
 
     else:
@@ -64,5 +63,5 @@ class EditProfile(EditProfileTemplate):
   @handle("go_back", "click")
   def go_back_click(self, **event_args):
     """This method is called when the button is clicked"""
-    open_form('FakeDashboard')
+    open_form('Settings')
 

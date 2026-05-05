@@ -1,28 +1,27 @@
 components:
-- layout_properties: {grid_position: 'ICDHGW,XHHRKE'}
-  name: label_1
-  properties: {align: center, bold: true, text: Settings}
-  type: Label
-- layout_properties: {grid_position: 'ANGILU,DXMYKP'}
-  name: button_3
-  properties: {text: Edit Profile >}
-  type: Button
-- layout_properties: {grid_position: 'IKXELM,FMLDOH'}
-  name: button_1
-  properties: {text: Reset Password    >}
-  type: Button
-- layout_properties: {grid_position: 'JJLZXF,COWODJ'}
-  name: button_2
-  properties: {text: Sign Out >}
-  type: Button
-- layout_properties: {grid_position: 'PECPHH,MNLOBS'}
-  name: label_2
-  properties: {text: Colour Theme}
+- event_bindings: {}
+  layout_properties: {grid_position: 'XQJKLT,HNOHVW'}
+  name: name_label
+  properties: {align: center}
   type: Label
 - event_bindings: {}
-  layout_properties: {grid_position: 'PECPHH,XXVMXH'}
-  name: theme_switch
-  properties: {text: Enable Dark Mode}
-  type: CheckBox
+  layout_properties: {grid_position: 'ANGILU,DXMYKP'}
+  name: edit_profile
+  properties: {text: Edit Profile >}
+  type: Button
+- event_bindings: {click: reset_pw_btn_click}
+  layout_properties: {grid_position: 'IKXELM,FMLDOH'}
+  name: reset_pw_btn
+  properties: {text: Change Password    >}
+  type: Button
+- layout_properties: {grid_position: 'IEXWFK,BSUTOK'}
+  name: delete_account
+  properties: {align: center, foreground: '#ff0000', text: Delete My Account  >}
+  type: Label
+- event_bindings: {}
+  layout_properties: {grid_position: 'JJLZXF,COWODJ'}
+  name: sign_out
+  properties: {text: Sign Out >, visible: true}
+  type: Button
 container: {type: ColumnPanel}
 is_package: true

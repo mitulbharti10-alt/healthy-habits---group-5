@@ -100,7 +100,7 @@ db_schema:
       type: link_single
     - admin_ui: {order: 3, width: 200}
       client_hidden: false
-      name: subject
+      name: category
       type: string
     indexes: []
     server: full
@@ -125,35 +125,35 @@ db_schema:
       name: email
       type: string
     - admin_ui: {order: 4, width: 200}
-      client_hidden: true
+      client_hidden: false
       name: enabled
       type: bool
     - admin_ui: {order: 5, width: 200}
-      client_hidden: true
+      client_hidden: false
       name: last_login
       type: datetime
     - admin_ui: {order: 6, width: 200}
-      client_hidden: true
+      client_hidden: false
       name: password_hash
       type: string
     - admin_ui: {order: 7, width: 200}
-      client_hidden: true
+      client_hidden: false
       name: n_password_failures
       type: number
     - admin_ui: {order: 8, width: 200}
-      client_hidden: true
+      client_hidden: false
       name: confirmed_email
       type: bool
     - admin_ui: {order: 9, width: 200}
-      client_hidden: true
+      client_hidden: false
       name: signed_up
       type: datetime
     - admin_ui: {order: 10, width: 200}
-      client_hidden: true
+      client_hidden: false
       name: mfa
       type: simpleObject
     - admin_ui: {order: 11, width: 200}
-      client_hidden: true
+      client_hidden: false
       name: remembered_logins
       type: simpleObject
     - admin_ui: {order: 12, width: 200}
@@ -198,5 +198,5 @@ services:
 - client_config: {}
   server_config: {}
   source: /runtime/services/google.yml
-startup: {module: LoginPage, type: form}
+startup: {module: ConfirmDelete, type: form}
 startup_form: null

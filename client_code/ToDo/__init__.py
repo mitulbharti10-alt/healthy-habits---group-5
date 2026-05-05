@@ -10,9 +10,7 @@ from anvil.tables import app_tables
 
 class ToDo(ToDoTemplate):
   def __init__(self, **properties):
-    # Set up the components
     self.init_components(**properties)
-
     # Load existing tasks when the app opens
     self.refresh_tasks()
 
@@ -21,15 +19,21 @@ class ToDo(ToDoTemplate):
     self.task_list.items = anvil.server.call('get_tasks')
 
   def add_btn_click(self, **event_args):
-    # 1. Get the text from your box
+    # 1. Get the text AND the category
     new_task = self.new_task_box.text
+    category = self.category_box.selected_value
 
+    # 2. Only run if there is actually text in the box
     if new_task:
-      # 2. Call the 'add_task' function from your Server Module
-      anvil.server.call('add_task', new_task)
+      # 3. Call the server and send BOTH pieces of data
+      anvil.server.call('add_task', new_task, category)
 
-      # 3. Clear the box
+      # 4. Clear the text box
       self.new_task_box.text = ""
 
-      # 4. Refresh the list to show the new task
+      # 5. Refresh the list to show the new item
       self.refresh_tasks()
+
+  def settings_btn_click(self, **event_args):
+    # Navigate to your Settings page
+    open_form('Settings')
