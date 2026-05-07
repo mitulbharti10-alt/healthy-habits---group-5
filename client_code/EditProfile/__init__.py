@@ -21,12 +21,12 @@ class EditProfile(EditProfileTemplate):
 
   def save_button_click(self, **event_args):
     """Saves the profile details to the database"""
-    # Validation: Don't allow saving empty fields
+    # Validation: Dont allow saving empty fields
     if not self.username_box.text or not self.email_box.text:
       Notification("Cannot save empty fields!", style="danger").show()
       return
 
-    # Call the server and catch the return message
+    # Call the server and get the return message
     result = anvil.server.call('update_user_profile', 
                                self.username_box.text, 
                                self.email_box.text)
